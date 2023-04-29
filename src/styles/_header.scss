@@ -1,0 +1,143 @@
+@use 'variaveis';
+
+.navbar{
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 1;
+    padding: 0;
+    background-color: variaveis.$corDeFundo;
+    color: variaveis.$corTextoPrincipal;
+    
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        @media( max-width: 768px) {
+            margin: -100;
+            min-height: 60px;
+
+            .navbar-toggler{
+                padding: 4px;
+
+                &-icon{
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+    }
+
+    &-brand{
+        max-width: 160px;
+        width: 100%;
+
+        @media( max-width: 768px) {
+            max-width: 120px;
+        }
+    }
+
+}
+
+.nav .nav-link{
+    margin: 0 4px;
+    background-color: variaveis.$corDeFundoBotaoSecundario;
+    color: lighten(variaveis.$corTextoBotao, 15%);
+    border-color: variaveis.$corDeFundoBotaoPrimario;
+
+    @media( max-width: 768px) {
+        margin: 4px 0;
+    }
+
+    &:hover{
+        background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 15%);
+    }
+}
+
+.nav .nav-link.active{
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    color: lighten($color: variaveis.$corTextoBotao, $amount: 20%);
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+
+    &:hover{
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 20%);
+    }
+}
+
+
+
+.navbar-toggler{
+    background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 10%);
+}
+
+.section{
+    height: 200px;
+}
+
+.section-title{
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.carousel-inner img{
+    height: 650px; 
+}
+
+#sobre-a-loja{
+    background-color: #000000;
+}
+
+#promocoes,
+#contato{
+    background-image: url(./images/promocoes/fundo.jpg);
+}
+
+#produtos{
+    background-image: url(./images/produtos/fundo1.jpg);
+}
+
+.form-floating:not(.form-control:disabled)::before {
+    content: none;
+}
+
+.form-floating > .form-control::placeholder{
+    color: revert;
+}
+
+.form-floating > .form-control:not(:focus)::placeholder{
+    color: transparent;
+}
+
+#mensagem {
+    height: 100px;
+    max-height: 100px;
+    resize: none;
+}
+
+.social-links li{
+    list-style: none;
+    display: inline;
+}
+
+.social-links a{
+    text-decoration: none;
+    color: #000000;
+}
+
+@media only screen and (max-width: 992px) {
+    #col-fale-conosco{
+        margin-bottom: 50px;
+    }
+
+    .menu-produtos,
+    .col-promocao,
+    .col-casual,
+    .col-social,
+    .col-rigor{
+        margin-bottom: 20px;
+    };
+
+}

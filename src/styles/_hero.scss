@@ -1,0 +1,50 @@
+@use 'variaveis';
+
+.hero{
+    // position: sticky;
+    width: 98vw;
+    height: 100vh;
+    min-height: 80vh;
+    display: grid;
+    background-image: url(../../src/images/fotos/hero_image.jpg);
+    // background-size: cover;
+    // background-attachment: fixed;
+
+    @media (max-width: 768px) {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    &__content{
+        max-width: 40vw;
+        width: 100%;
+        display: grid;
+        align-items: center;
+
+        @media( max-width: 768px) {
+            max-width: 50vw;    
+            align-items: normal;
+            margin-top: 60px;
+        }
+    
+        &__box{
+            margin: 0 0 0px 8px;
+
+            h1{
+                font-style: italic;
+            }
+    
+            p{
+                color: variaveis.$corTextoSecundario;
+                margin: 8px 8px;
+            }
+
+            &__idade{
+                margin-right: 8px;
+                padding: 2px;
+                border: 1px solid variaveis.$corTextoSecundario;
+            }
+        }
+    }
+}
