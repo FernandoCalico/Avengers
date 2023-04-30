@@ -1,51 +1,34 @@
 @use 'variaveis';
 
 .elenco{
-    width: 98vw;
-    height: 100vh;
-    margin-left: 8px;
-    margin-right: 8px;
-
-    @media (max-width: 768px) {
-        display: block;
-    }
-    
-    &__titulo{
+    &__hero{
+        width: 98vw;
         height: 100vh;
-    }
-
-    &__image{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../../src/images/elenco/elenco.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        @media (max-width: 768px) {
-            background-size: contain;
-        }
-
+        margin-left: 8px;
+        margin-right: 8px;
     }    
 
-    &__atores{
-        max-width: 30vw;
+    &__atores__items{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-;
-        margin-top: -91vh;
-        text-align: center;
-        overflow-wrap: hidden;
-    }
 
-    &__ator{
-        min-width: 8.5vw;
-        display: block;
-        margin: 0;
-        padding: 0;
-        margin-left: 2px;
-        margin-bottom: 16px;
+        &__ator{
+            margin: 0;
+            padding: 0;
+            display: block;
+            text-align: center;
 
-        p{
-            line-height: 16px;
-            color: variaveis.$corTextoSecundario;
+            p{
+                line-height: 16px;
+            }
         }
-    }
+
+    }   
+
+    &__image{
+        background-image: url(../../src/images/elenco/elenco.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }    
+
 }
