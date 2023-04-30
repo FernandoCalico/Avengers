@@ -5,6 +5,10 @@
     height: 100vh;
     margin-left: 8px;
     margin-right: 8px;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
     
     &__titulo{
         height: 100vh;
@@ -14,6 +18,11 @@
         background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../../src/images/elenco/elenco.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media (max-width: 768px) {
+            background-size: contain;
+        }
+
     }    
 
     &__atores{

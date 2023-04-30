@@ -1,43 +1,59 @@
 @use 'variaveis';
 
 .hero{
-    // position: sticky;
+    position: sticky;
     width: 98vw;
     height: 100vh;
     min-height: 80vh;
     display: grid;
     background-image: url(../../src/images/fotos/hero_image.jpg);
-    // background-size: cover;
-    // background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
         background-size: contain;
         background-repeat: no-repeat;
         background-attachment: scroll;
+        align-items: normal;
     }
 
     &__content{
         max-width: 40vw;
         width: 100%;
         display: grid;
-        align-items: center;
-
-        @media( max-width: 768px) {
-            max-width: 50vw;    
+    
+        @media screen and (max-width: 1023px) {
+            max-width: 1000vw;
             align-items: normal;
-            margin-top: 60px;
+            margin-top: 300px;
+            background-color: red;
         }
+
+        @media screen and (min-width: 768px) and (max-width: 819px) {
+            margin-top: 400px;
+        }           
     
         &__box{
             margin: 0 0 0px 8px;
 
             h1{
                 font-style: italic;
+
+                // @media screen and (max-width: 1023px) {
+                //     margin-left: 8px;
+                //     font-size: 24px;
+                // }
             }
     
             p{
                 color: variaveis.$corTextoSecundario;
                 margin: 8px 8px;
+
+                // @media screen and (min-width: 768px) and (max-width: 1023px) {
+                //     margin: 12px 8px;
+                //     font-size: 14px;
+                //     line-height: 18px;
+                // }
             }
 
             &__idade{
