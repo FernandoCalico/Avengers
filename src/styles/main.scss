@@ -2,6 +2,7 @@
 @use 'header';
 @use 'hero';
 @use 'elenco';
+@use 'faqs';
 
 @font-face {
     font-family: Avenir;
@@ -49,8 +50,8 @@ body {
     @include text;
 
     @media (max-width: 768px) {
-        @include text(10px);
-        line-height: 12px;
+        @include text(12px);
+        line-height: 15px;
     }
 }
 
