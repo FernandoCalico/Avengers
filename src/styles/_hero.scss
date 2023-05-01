@@ -37,22 +37,11 @@
 
             h1{
                 font-style: italic;
-
-                // @media screen and (max-width: 1023px) {
-                //     margin-left: 8px;
-                //     font-size: 24px;
-                // }
             }
     
             p{
                 color: variaveis.$corTextoSecundario;
                 margin: 8px 8px;
-
-                // @media screen and (min-width: 768px) and (max-width: 1023px) {
-                //     margin: 12px 8px;
-                //     font-size: 14px;
-                //     line-height: 18px;
-                // }
             }
 
             &__idade{

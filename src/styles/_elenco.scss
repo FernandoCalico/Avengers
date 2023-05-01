@@ -1,35 +1,53 @@
 @use 'variaveis';
 
 .elenco{
+    width: 98vw;
+    height: 100vh;
+    
     &__hero{
-        width: 98vw;
-        height: 100vh;
+        height: 60vh;
+        background-image: url(../../src/images/elenco/elenco.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
         margin-left: 8px;
         margin-right: 8px;
+
+        @media screen and (max-width: 480px) {
+            height: 45vh;
+        }
     }    
 
-    &__atores__items{
-        display: flex;
-        flex-wrap: wrap;
+    &__atores{
+        height: 60vh;
 
-        &__ator{
-            margin: 0;
-            padding: 0;
-            display: block;
-            text-align: center;
-
-            p{
-                color: variaveis.$corTextoSecundario;    
-                line-height: 16px;
-            }
+        @media screen and (max-width: 480px) {
+            height: 35vh;
         }
 
-    }   
+        &__items{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 16px;
 
-    &__image{
-        background-image: url(../../src/images/elenco/elenco.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }    
+            @media screen and (max-width: 480px) {
+                margin-top: 4px;
+            }
+    
+            &__ator{
+                display: block;
+                text-align: center;
 
+                @media screen and (max-width: 480px) {
+                    width: 80px;
+                }
+        
+                p{
+                    line-height: 16px;
+                    color: variaveis.$corTextoSecundario;
+                }
+            }
+        }
+    }
 }
