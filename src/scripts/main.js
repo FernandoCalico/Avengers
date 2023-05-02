@@ -2,26 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const questions = document.querySelectorAll('[data-faq-question]'); 
 
     for (let i = 0; i < questions.length; i++) {
-        fechaRespostas
-        questions[i].addEventListener('click', abreOuFechaResposta);
-    } 
-})
+        questions[i].addEventListener('click', abreOuFechaResposta, false);
+    };
 
-function fechaRespostas(elemento) {
-    const classeFechada = 'faqs__questions__items'; 
-    const classeAberta = 'faqs__questions__items--is-open';
-    const elementoPai = elemento.target.parentNode;
-    const classeElementoPai = elementoPai.className
-        
-    if (classeElementoPai == classeAberta) { 
-        elementoPai.classList.toggle(classeFechada);
+    function abreOuFechaResposta(elemento) {
+        const classe = 'faqs__questions__items--is-open';
+        const elementoPai = elemento.target.parentNode;
+        const itemClass = elementoPai.className;
+
+        for (i = 0; i < questions.length; i++) {
+            questions[i].classList.remove(classe);
+        };
+
+        if (itemClass.search(classe) < 0) {
+            elementoPai.classList.toggle(classe);
+        }
     }
-}
-
-function abreOuFechaResposta(elemento) {
-    const classe = 'faqs__questions__items--is-open';
-    const elementoPai = elemento.target.parentNode;
-
-    elementoPai.classList.toggle(classe);
-}
-
+})

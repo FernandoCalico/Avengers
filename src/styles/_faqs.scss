@@ -37,11 +37,11 @@
                 border-radius: 8px;
                 background-color: variaveis.$corDeFundoBotaoSecundario;
 
-
                 p{
                     color: lighten(variaveis.$corTextoBotao, 15%);
                     font-weight: bold;
                     margin: 0;
+                    padding-right: 40px;
                 }
 
                 &::after {
